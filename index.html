@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Kireeti Chalamalasetty — Full Stack · AI Engineer</title>
+  <meta name="description" content="Full Stack Developer &amp; Generative AI Engineer with 3+ years building scalable web apps, AI-powered tools, and production ML systems across fintech, analytics, and e-commerce." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+  <!-- ══════════════════════════════════════
+       NAV
+  ══════════════════════════════════════ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo cursor-hover">
+        <span class="logo-mark">SK</span>
+        <span class="logo-sep">.</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"      class="nav-link cursor-hover">About</a></li>
+        <li><a href="#skills"     class="nav-link cursor-hover">Skills</a></li>
+        <li><a href="#experience" class="nav-link cursor-hover">Experience</a></li>
+        <li><a href="#projects"   class="nav-link cursor-hover">Projects</a></li>
+        <li><a href="#education"  class="nav-link cursor-hover">Education</a></li>
+        <li><a href="#contact"    class="nav-link cursor-hover">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle cursor-hover" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="nav-cta cursor-hover">Let's Talk</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       SCENE 01 — HERO
+  ══════════════════════════════════════ -->
+  <section class="scene hero-scene" id="hero">
+    <!-- Animated background layers -->
+    <canvas class="particle-canvas" id="particleCanvas"></canvas>
+    <div class="mesh-gradient"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+
+    <div class="hero-layout">
+      <!-- Left: Name + Role -->
+      <div class="hero-left">
+        <div class="hero-eyebrow reveal-fade" data-delay="0">
+          <span class="availability-dot"></span>
+          <span class="mono-sm">Available for opportunities</span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="hn-line hn-first reveal-slide" data-delay="100">Sai</span>
+          <span class="hn-line hn-middle reveal-slide" data-delay="220">Kireeti</span>
+          <span class="hn-line hn-last reveal-slide" data-delay="340">Chalamalasetty</span>
+        </h1>
+
+        <div class="hero-role reveal-fade" data-delay="500">
+          <span class="role-static">I build&nbsp;</span>
+          <span class="typewriter-track">
+            <span class="typewriter-text" id="typewriterEl"></span>
+            <span class="tw-cursor">|</span>
+          </span>
+        </div>
+
+        <p class="hero-subtitle reveal-fade" data-delay="650">
+          Full Stack Developer &nbsp;·&nbsp; Generative AI Engineer &nbsp;·&nbsp; AI/ML Developer
+        </p>
+
+        <div class="hero-actions reveal-fade" data-delay="800">
+          <a href="#projects" class="btn-primary cursor-hover">
+            <span>View My Work</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn-outline cursor-hover">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+
+        <p class="hero-location reveal-fade" data-delay="950">
+          <i class="fa-solid fa-location-dot"></i>
+          Irving, TX &nbsp;·&nbsp; Open to Remote
+        </p>
+      </div>
+
+      <!-- Right: Stats + floating tags -->
+      <div class="hero-right">
+        <div class="hero-stats-cluster" id="statsCluster">
+          <div class="hstat reveal-right" data-delay="400">
+            <span class="hstat-val">
+              <span class="count-up" data-target="3">0</span>+
+            </span>
+            <span class="hstat-label">Years Experience</span>
+          </div>
+          <div class="hstat reveal-right" data-delay="520">
+            <span class="hstat-val">
+              <span class="count-up" data-target="70">0</span>%
+            </span>
+            <span class="hstat-label">Faster 3D Pipeline</span>
+          </div>
+          <div class="hstat reveal-right" data-delay="640">
+            <span class="hstat-val">
+              <span class="count-up" data-target="99">0</span>%
+            </span>
+            <span class="hstat-label">CV Model Accuracy</span>
+          </div>
+          <div class="hstat reveal-right" data-delay="760">
+            <span class="hstat-val">
+              <span class="count-up" data-target="4">0</span>
+            </span>
+            <span class="hstat-label">Companies</span>
+          </div>
+        </div>
+
+        <div class="ftags-orbit">
+          <span class="ftag ft1 cursor-hover">React.js</span>
+          <span class="ftag ft2 cursor-hover">Claude AI</span>
+          <span class="ftag ft3 cursor-hover">Node.js</span>
+          <span class="ftag ft4 cursor-hover">PyTorch</span>
+          <span class="ftag ft5 cursor-hover">Spring Boot</span>
+          <span class="ftag ft6 cursor-hover">OpenAI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <div class="scroll-line-anim"></div>
+      <span class="mono-xs scroll-label">scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SCENE 02 — ABOUT
+  ══════════════════════════════════════ -->
+  <section class="scene about-scene" id="about">
+    <div class="about-bg-deco" aria-hidden="true">SK</div>
+
+    <div class="about-layout">
+      <div class="about-left">
+        <div class="section-label reveal-fade">
+          <span class="label-num mono-sm">01</span>
+          <span class="label-divider"></span>
+          <span class="label-text">About</span>
+        </div>
+
+        <h2 class="about-headline reveal-slide" data-delay="100">
+          Building systems<br />
+          that <em class="grad-text">think, scale</em>,<br />
+          and deliver.
+        </h2>
+
+        <p class="about-body reveal-fade" data-delay="260">
+          I'm a Full Stack Developer and Generative AI Engineer with <strong>3+ years</strong> of
+          experience shipping production systems across fintech, analytics, and e-commerce. I
+          specialize in bridging complex AI capabilities with performant, accessible frontends —
+          turning cutting-edge models into real user value.
+        </p>
+
+        <p class="about-body reveal-fade" data-delay="380">
+          At <strong>Citibank</strong>, I build enterprise AI tools serving millions of users.
+          At <strong>Lid Vizion</strong>, I cut 3D asset creation time by 70% using Claude AI.
+          I hold an <strong>M.S. in Computer Science</strong> from the University of South Dakota.
+        </p>
+
+        <div class="about-socials reveal-fade" data-delay="500">
+          <a href="https://linkedin.com/in/kireeti-chalamalasetty" target="_blank" rel="noopener" class="about-social cursor-hover">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/sai-kireeti" target="_blank" rel="noopener" class="about-social cursor-hover">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:saikireetichalamalasetty@gmail.com" class="about-social cursor-hover">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <div class="specialty-grid">
+          <div class="scard reveal-up" data-delay="100">
+            <div class="scard-icon-wrap">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3>Full Stack</h3>
+            <p>React, Node.js, Java Spring Boot — end-to-end systems at scale</p>
+          </div>
+          <div class="scard reveal-up" data-delay="240">
+            <div class="scard-icon-wrap scard-purple">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3>Generative AI</h3>
+            <p>Claude AI, OpenAI, LangChain, RAG pipelines in production</p>
+          </div>
+          <div class="scard reveal-up" data-delay="380">
+            <div class="scard-icon-wrap scard-orange">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>AI / ML</h3>
+            <p>PyTorch, TensorFlow, CV, NLP — from research to deployment</p>
+          </div>
+          <div class="scard reveal-up" data-delay="520">
+            <div class="scard-icon-wrap scard-cyan">
+              <i class="fa-brands fa-aws"></i>
+            </div>
+            <h3>Cloud &amp; DevOps</h3>
+            <p>AWS, Docker, Kubernetes, CI/CD — production-grade infra</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-statement-bar reveal-fade" data-delay="200">
+      <span class="statement-inner">Zero critical bugs. Every sprint. On time.</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SCENE 03 — SKILLS
+  ══════════════════════════════════════ -->
+  <section class="scene skills-scene" id="skills">
+    <div class="skills-layout">
+      <div class="skills-header">
+        <div class="section-label reveal-fade">
+          <span class="label-num mono-sm">02</span>
+          <span class="label-divider"></span>
+          <span class="label-text">Technical Stack</span>
+        </div>
+        <h2 class="section-title reveal-slide" data-delay="100">The tools I wield</h2>
+      </div>
+
+      <div class="skills-canvas">
+        <!-- Panel: Languages — upper left, slight rotation -->
+        <div class="skill-panel sp-languages reveal-up" data-delay="0">
+          <div class="sp-label mono-xs">lang</div>
+          <h3 class="sp-title">Languages</h3>
+          <div class="sp-tags">
+            <span class="sptag spt-primary">JavaScript</span>
+            <span class="sptag spt-primary">TypeScript</span>
+            <span class="sptag spt-primary">Java</span>
+            <span class="sptag spt-primary">Python</span>
+            <span class="sptag spt-primary">SQL</span>
+            <span class="sptag spt-dim">C/C++</span>
+            <span class="sptag spt-dim">MATLAB</span>
+          </div>
+        </div>
+
+        <!-- Panel: Frontend — top center -->
+        <div class="skill-panel sp-frontend reveal-up" data-delay="120">
+          <div class="sp-label mono-xs">ui</div>
+          <h3 class="sp-title">Frontend</h3>
+          <div class="sp-tags">
+            <span class="sptag spt-blue">React.js</span>
+            <span class="sptag spt-blue">Next.js</span>
+            <span class="sptag spt-blue">Angular</span>
+            <span class="sptag spt-blue">AngularJS</span>
+            <span class="sptag spt-blue">HTML5</span>
+            <span class="sptag spt-blue">CSS3</span>
+          </div>
+        </div>
+
+        <!-- Panel: Backend — upper right -->
+        <div class="skill-panel sp-backend reveal-up" data-delay="240">
+          <div class="sp-label mono-xs">api</div>
+          <h3 class="sp-title">Backend</h3>
+          <div class="sp-tags">
+            <span class="sptag spt-green">Node.js</span>
+            <span class="sptag spt-green">Express.js</span>
+            <span class="sptag spt-green">Spring Boot</span>
+            <span class="sptag spt-green">Hibernate</span>
+            <span class="sptag spt-green">Flask</span>
+            <span class="sptag spt-green">REST APIs</span>
+            <span class="sptag spt-green">JWT Auth</span>
+            <span class="sptag spt-green">RBAC</span>
+          </div>
+        </div>
+
+        <!-- Panel: Gen AI — middle left, elevated z-index -->
+        <div class="skill-panel sp-genai sp-elevated reveal-up" data-delay="80">
+          <div class="sp-label mono-xs">gen&#8209;ai</div>
+          <h3 class="sp-title">Generative AI</h3>
+          <div class="sp-tags">
+            <span class="sptag spt-purple">Claude AI</span>
+            <span class="sptag spt-purple">OpenAI APIs</span>
+            <span class="sptag spt-purple">LangChain</span>
+            <span class="sptag spt-purple">HuggingFace</span>
+            <span class="sptag spt-purple">RAG Pipelines</span>
+            <span class="sptag spt-purple">Prompt Eng.</span>
+            <span class="sptag spt-purple">LLM Integration</span>
+          </div>
+        </div>
+
+        <!-- Panel: AI/ML — center -->
+        <div class="skill-panel sp-ml reveal-up" data-delay="200">
+          <div class="sp-label mono-xs">ml</div>
+          <h3 class="sp-title">AI / ML</h3>
+          <div class="sp-tags">
+            <span class="sptag spt-orange">PyTorch</span>
+            <span class="sptag spt-orange">TensorFlow</span>
+            <span class="sptag spt-orange">Keras</span>
+            <span class="sptag spt-orange">Scikit-learn</span>
+            <span class="sptag spt-orange">OpenCV</span>
+            <span class="sptag spt-orange">CNN</span>
+            <span class="sptag spt-orange">NLP</span>
+            <span class="sptag spt-orange">Anomaly Detection</span>
+          </div>
+        </div>
+
+        <!-- Panel: Cloud — lower right -->
+        <div class="skill-panel sp-cloud reveal-up" data-delay="320">
+          <div class="sp-label mono-xs">cloud</div>
+          <h3 class="sp-title">Cloud &amp; DevOps</h3>
+          <div class="sp-tags">
+            <span class="sptag spt-cyan">AWS EC2</span>
+            <span class="sptag spt-cyan">AWS S3</span>
+            <span class="sptag spt-cyan">Lambda</span>
+            <span class="sptag spt-cyan">GCP</span>
+            <span class="sptag spt-cyan">Docker</span>
+            <span class="sptag spt-cyan">Kubernetes</span>
+            <span class="sptag spt-cyan">CI/CD</span>
+            <span class="sptag spt-cyan">GitHub Actions</span>
+          </div>
+        </div>
+
+        <!-- Panel: Databases — lower left -->
+        <div class="skill-panel sp-db reveal-up" data-delay="160">
+          <div class="sp-label mono-xs">db</div>
+          <h3 class="sp-title">Databases</h3>
+          <div class="sp-tags">
+            <span class="sptag spt-gold">MongoDB</span>
+            <span class="sptag spt-gold">MySQL</span>
+            <span class="sptag spt-gold">PostgreSQL</span>
+            <span class="sptag spt-gold">Redis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SCENE 04 — EXPERIENCE
+  ══════════════════════════════════════ -->
+  <section class="scene experience-scene" id="experience">
+    <div class="experience-layout">
+      <div class="exp-header">
+        <div class="section-label reveal-fade">
+          <span class="label-num mono-sm">03</span>
+          <span class="label-divider"></span>
+          <span class="label-text">Experience</span>
+        </div>
+        <h2 class="section-title reveal-slide" data-delay="100">Where I've built</h2>
+      </div>
+
+      <!-- Timeline -->
+      <div class="cinematic-timeline">
+        <div class="timeline-spine"></div>
+
+        <!-- ── Citibank ── -->
+        <article class="tl-entry tl-right reveal-left" data-delay="0">
+          <div class="tl-watermark" aria-hidden="true">Citibank</div>
+          <div class="tl-node">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-card">
+            <header class="tl-card-header">
+              <div class="tl-meta">
+                <span class="mono-xs tl-date">Oct 2025 — Present</span>
+                <span class="tl-badge badge-now">Current</span>
+              </div>
+              <h3 class="tl-role">Full Stack AI Developer</h3>
+              <p class="tl-company">
+                <i class="fa-solid fa-building-columns"></i>
+                Citibank &nbsp;·&nbsp; Irving, TX
+              </p>
+            </header>
+            <ul class="tl-bullets">
+              <li><strong>City Assist</strong> — Enterprise AI support platform (React.js, TypeScript) for 10 products with role-based UI &amp; AI autosuggestions</li>
+              <li>Citi Mobile App feature development &amp; accessibility improvements for millions of users</li>
+              <li>4 sprint stories delivered on time every cycle — <strong>zero critical production bugs</strong></li>
+            </ul>
+            <div class="tl-tags">
+              <span>React.js</span><span>TypeScript</span><span>AI Integration</span><span>Node.js</span><span>RBAC</span><span>Fintech</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Lid Vizion ── -->
+        <article class="tl-entry tl-left reveal-right" data-delay="100">
+          <div class="tl-watermark" aria-hidden="true">Lid Vizion</div>
+          <div class="tl-node">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-card">
+            <header class="tl-card-header">
+              <div class="tl-meta">
+                <span class="mono-xs tl-date">Jan 2024 — Sep 2025</span>
+              </div>
+              <h3 class="tl-role">Full Stack Developer</h3>
+              <p class="tl-company">
+                <i class="fa-solid fa-cube"></i>
+                Lid Vizion &nbsp;·&nbsp; Miami, FL
+              </p>
+            </header>
+            <ul class="tl-bullets">
+              <li>Built React.js + Node.js app for image-to-3D model generation via Meshy API (6 models/session)</li>
+              <li>Integrated <strong>Claude AI</strong> for text-to-Blender automation at <strong>90% reliability</strong></li>
+              <li>End-to-end pipeline: Flask + Google Sheets API + Apps Script + Drive</li>
+              <li><strong>70% reduction</strong> in 3D asset creation time</li>
+            </ul>
+            <div class="tl-tags">
+              <span>React.js</span><span>Node.js</span><span>Claude AI</span><span>Flask</span><span>Meshy API</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Merkle ── -->
+        <article class="tl-entry tl-right reveal-left" data-delay="200">
+          <div class="tl-watermark" aria-hidden="true">Merkle</div>
+          <div class="tl-node">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-card">
+            <header class="tl-card-header">
+              <div class="tl-meta">
+                <span class="mono-xs tl-date">Jul 2022 — Jun 2023</span>
+              </div>
+              <h3 class="tl-role">Java Full Stack Developer</h3>
+              <p class="tl-company">
+                <i class="fa-solid fa-chart-line"></i>
+                Merkle &nbsp;·&nbsp; Coimbatore, India
+              </p>
+            </header>
+            <ul class="tl-bullets">
+              <li>Real-time survey analytics dashboard (AngularJS + Spring Boot) with 500+ DAU</li>
+              <li><strong>30% backend performance improvement</strong> via SQL optimization</li>
+              <li>Secure REST APIs with JWT + RBAC, GitHub workflow for 6+ developers</li>
+            </ul>
+            <div class="tl-tags">
+              <span>AngularJS</span><span>Spring Boot</span><span>JWT</span><span>SQL</span><span>REST APIs</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── IIT Bombay ── -->
+        <article class="tl-entry tl-left reveal-right" data-delay="300">
+          <div class="tl-watermark" aria-hidden="true">IIT Bombay</div>
+          <div class="tl-node">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-card">
+            <header class="tl-card-header">
+              <div class="tl-meta">
+                <span class="mono-xs tl-date">Nov 2021 — Jan 2022</span>
+                <span class="tl-badge badge-intern">Internship</span>
+              </div>
+              <h3 class="tl-role">Full Stack Developer Intern</h3>
+              <p class="tl-company">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Techfest IIT Bombay &nbsp;·&nbsp; Mumbai, India
+              </p>
+            </header>
+            <ul class="tl-bullets">
+              <li>Delivered complete e-commerce app independently in 3 months</li>
+              <li>Angular + Node.js + Express.js + MongoDB — product browsing, cart, order processing</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Angular</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SCENE 05 — PROJECTS
+  ══════════════════════════════════════ -->
+  <section class="scene projects-scene" id="projects">
+    <div class="projects-layout">
+      <div class="proj-header">
+        <div class="section-label reveal-fade">
+          <span class="label-num mono-sm">04</span>
+          <span class="label-divider"></span>
+          <span class="label-text">Projects</span>
+        </div>
+        <h2 class="section-title reveal-slide" data-delay="100">Selected work</h2>
+      </div>
+
+      <div class="bento-grid">
+        <!-- City Assist — span 2 col -->
+        <div class="bcard bcard-wide bcard-blue reveal-up" data-delay="0">
+          <div class="bcard-glow"></div>
+          <div class="bcard-inner">
+            <div class="bcard-top-row">
+              <span class="bcard-eyebrow mono-xs">Live · Citibank · Oct 2025</span>
+              <span class="bcard-live-badge"><span class="live-pulse"></span>Live</span>
+            </div>
+            <h3 class="bcard-title">City Assist</h3>
+            <p class="bcard-role">Enterprise AI Agent Support Platform</p>
+            <p class="bcard-desc">
+              Role-based enterprise AI support platform spanning 10 Citibank products. AI-driven autosuggestions reduce escalation rates and improve first-contact resolution for millions of banking users. Built with React.js + TypeScript on the frontend and Node.js REST APIs on the backend.
+            </p>
+            <div class="bcard-metrics">
+              <div class="bmetric"><span class="bm-val">10</span><span class="bm-label">Products</span></div>
+              <div class="bmetric"><span class="bm-val">0</span><span class="bm-label">Critical Bugs</span></div>
+              <div class="bmetric"><span class="bm-val">4</span><span class="bm-label">Sprints On-Time</span></div>
+            </div>
+          </div>
+          <div class="bcard-tech-row">
+            <span>React.js</span><span>TypeScript</span><span>Node.js</span><span>REST APIs</span><span>AI Integration</span><span>Fintech</span>
+          </div>
+        </div>
+
+        <!-- Meshy 3D Generator — span 2 col -->
+        <div class="bcard bcard-wide bcard-purple reveal-up" data-delay="140">
+          <div class="bcard-glow"></div>
+          <div class="bcard-inner">
+            <div class="bcard-top-row">
+              <span class="bcard-eyebrow mono-xs">Jun 2024 — Dec 2024</span>
+              <a href="https://github.com/sai-kireeti" target="_blank" rel="noopener" class="bcard-gh cursor-hover">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <h3 class="bcard-title">Meshy 3D Generator</h3>
+            <p class="bcard-role">AI-Powered Image-to-3D Pipeline</p>
+            <p class="bcard-desc">
+              Integrated Claude AI for text-to-Blender automation achieving 90% reliability. Cuts 3D asset creation time by 70%, processing up to 6 models per session through a fully automated Flask + Google APIs pipeline.
+            </p>
+            <div class="bcard-metrics">
+              <div class="bmetric"><span class="bm-val">70%</span><span class="bm-label">Faster</span></div>
+              <div class="bmetric"><span class="bm-val">90%</span><span class="bm-label">Reliability</span></div>
+              <div class="bmetric"><span class="bm-val">6</span><span class="bm-label">Models/Session</span></div>
+            </div>
+          </div>
+          <div class="bcard-tech-row">
+            <span>React.js</span><span>Node.js</span><span>Claude AI</span><span>Meshy API</span><span>Flask</span><span>Google APIs</span>
+          </div>
+        </div>
+
+        <!-- Diabetes Prediction — half width -->
+        <div class="bcard bcard-half bcard-orange reveal-up" data-delay="280">
+          <div class="bcard-glow"></div>
+          <div class="bcard-inner">
+            <div class="bcard-top-row">
+              <span class="bcard-eyebrow mono-xs">Jun 2021 — Jun 2022</span>
+            </div>
+            <h3 class="bcard-title">Diabetes Prediction</h3>
+            <p class="bcard-role">Ensemble ML Classification</p>
+            <p class="bcard-desc">
+              SVM, Random Forest, AdaBoost &amp; Decision Trees for medical-grade classification accuracy on the Pima Indian Diabetes dataset.
+            </p>
+            <div class="bcard-accent-stat">
+              <span class="bas-num">95%</span>
+              <span class="bas-label">ML Precision</span>
+            </div>
+          </div>
+          <div class="bcard-tech-row">
+            <span>Python</span><span>Scikit-learn</span><span>SVM</span><span>Random Forest</span><span>AdaBoost</span>
+          </div>
+        </div>
+
+        <!-- COVID Mask Detection — half width -->
+        <div class="bcard bcard-half bcard-teal reveal-up" data-delay="420">
+          <div class="bcard-glow"></div>
+          <div class="bcard-inner">
+            <div class="bcard-top-row">
+              <span class="bcard-eyebrow mono-xs">Published Feb 2022</span>
+              <span class="bcard-research-badge">Research</span>
+            </div>
+            <h3 class="bcard-title">COVID Mask Detection</h3>
+            <p class="bcard-role">Deep Learning Computer Vision</p>
+            <p class="bcard-desc">
+              CNN-based real-time mask detection with automatic alerting. Published research on public safety computer vision.
+            </p>
+            <div class="bcard-accent-stat">
+              <span class="bas-num">99%</span>
+              <span class="bas-label">Detection Accuracy</span>
+            </div>
+          </div>
+          <div class="bcard-tech-row">
+            <span>Python</span><span>OpenCV</span><span>CNN</span><span>Deep Learning</span><span>TensorFlow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SCENE 06 — EDUCATION
+  ══════════════════════════════════════ -->
+  <section class="scene education-scene" id="education">
+    <div class="education-layout">
+      <div class="edu-header">
+        <div class="section-label reveal-fade">
+          <span class="label-num mono-sm">05</span>
+          <span class="label-divider"></span>
+          <span class="label-text">Education</span>
+        </div>
+        <h2 class="section-title reveal-slide" data-delay="100">Academic foundation</h2>
+      </div>
+
+      <div class="edu-stage">
+        <div class="edu-card edu-ms reveal-left" data-delay="0">
+          <div class="edu-ghost-text" aria-hidden="true">M.S.</div>
+          <div class="edu-card-body">
+            <div class="edu-icon-wrap">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="edu-info">
+              <span class="mono-xs edu-date">Aug 2023 — May 2025</span>
+              <h3 class="edu-degree">Master of Science</h3>
+              <h4 class="edu-major">Computer Science</h4>
+              <p class="edu-uni">
+                <i class="fa-solid fa-location-dot"></i>
+                University of South Dakota, USA
+              </p>
+              <div class="edu-tags">
+                <span>Computer Vision</span>
+                <span>ML Algorithms</span>
+                <span>Pattern Recognition</span>
+                <span>Data Mining</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-connector-line reveal-fade" data-delay="150">
+          <div class="ecl-inner"></div>
+        </div>
+
+        <div class="edu-card edu-btech reveal-right" data-delay="80">
+          <div class="edu-ghost-text" aria-hidden="true">B.Tech</div>
+          <div class="edu-card-body">
+            <div class="edu-icon-wrap edu-icon-blue">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div class="edu-info">
+              <span class="mono-xs edu-date">2018 — 2022</span>
+              <h3 class="edu-degree">Bachelor of Technology</h3>
+              <h4 class="edu-major">Computer Science &amp; Engineering</h4>
+              <p class="edu-uni">
+                <i class="fa-solid fa-location-dot"></i>
+                Sasi Institute of Technology &amp; Engineering, India
+              </p>
+              <div class="edu-tags">
+                <span>Machine Learning</span>
+                <span>Cloud Computing</span>
+                <span>Artificial Intelligence</span>
+                <span>Data Structures</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SCENE 07 — CONTACT
+  ══════════════════════════════════════ -->
+  <section class="scene contact-scene" id="contact">
+    <div class="contact-orb contact-orb-1"></div>
+    <div class="contact-orb contact-orb-2"></div>
+
+    <div class="contact-layout">
+      <div class="contact-left">
+        <div class="section-label reveal-fade">
+          <span class="label-num mono-sm">06</span>
+          <span class="label-divider"></span>
+          <span class="label-text">Contact</span>
+        </div>
+
+        <h2 class="contact-headline reveal-slide" data-delay="100">
+          Let's build<br />
+          <em class="grad-text">something</em><br />
+          remarkable.
+        </h2>
+
+        <p class="contact-sub reveal-fade" data-delay="300">
+          Open to full-time roles, freelance projects, and AI/ML collaborations. Let's talk.
+        </p>
+
+        <div class="contact-details reveal-fade" data-delay="420">
+          <a href="mailto:saikireetichalamalasetty@gmail.com" class="cdetail cursor-hover">
+            <span class="cdetail-icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <span class="cdetail-label mono-xs">Email</span>
+              <span class="cdetail-val">saikireetichalamalasetty@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:6057401060" class="cdetail cursor-hover">
+            <span class="cdetail-icon"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <span class="cdetail-label mono-xs">Phone</span>
+              <span class="cdetail-val">605-740-1060</span>
+            </div>
+          </a>
+          <div class="cdetail">
+            <span class="cdetail-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <span class="cdetail-label mono-xs">Location</span>
+              <span class="cdetail-val">Irving, TX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-socials reveal-fade" data-delay="540">
+          <a href="https://linkedin.com/in/kireeti-chalamalasetty" target="_blank" rel="noopener" class="csocial cursor-hover" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/sai-kireeti" target="_blank" rel="noopener" class="csocial cursor-hover" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:saikireetichalamalasetty@gmail.com" class="csocial cursor-hover" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-right reveal-right" data-delay="200">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="cf-group">
+            <label for="cf-name" class="cf-label mono-xs">Name</label>
+            <input type="text" id="cf-name" name="name" class="cf-input cursor-hover" placeholder="Your name" required />
+          </div>
+          <div class="cf-group">
+            <label for="cf-email" class="cf-label mono-xs">Email</label>
+            <input type="email" id="cf-email" name="email" class="cf-input cursor-hover" placeholder="your@email.com" required />
+          </div>
+          <div class="cf-group">
+            <label for="cf-subject" class="cf-label mono-xs">Subject</label>
+            <input type="text" id="cf-subject" name="subject" class="cf-input cursor-hover" placeholder="What's this about?" />
+          </div>
+          <div class="cf-group">
+            <label for="cf-message" class="cf-label mono-xs">Message</label>
+            <textarea id="cf-message" name="message" class="cf-textarea cursor-hover" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit cursor-hover">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <div class="cf-success" id="cfSuccess">
+            <i class="fa-solid fa-circle-check"></i>
+            Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-layout">
+      <div class="footer-left">
+        <span class="footer-logo">SK<span class="footer-dot">.</span></span>
+        <p class="footer-copy">&copy; <span id="footerYear"></span> Sai Kireeti Chalamalasetty</p>
+      </div>
+      <p class="footer-craft mono-xs">Crafted with precision &amp; passion</p>
+      <div class="footer-right">
+        <a href="https://linkedin.com/in/kireeti-chalamalasetty" target="_blank" rel="noopener" aria-label="LinkedIn" class="cursor-hover"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/sai-kireeti" target="_blank" rel="noopener" aria-label="GitHub" class="cursor-hover"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:saikireetichalamalasetty@gmail.com" aria-label="Email" class="cursor-hover"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
